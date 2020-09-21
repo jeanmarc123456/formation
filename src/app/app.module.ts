@@ -13,7 +13,7 @@ import { OrdersModule } from './orders/orders.module';
 import { SharedModule } from './shared/shared.module';
 import { TemplateModule } from './template/template.module';
 import { UIModule } from './ui/ui.module';
-import { TexteModule } from './text/texte.module';
+import { TexteModule } from './texte/texte.module';
 import { IconModule } from './icon/icon.module';
 
 @NgModule({
