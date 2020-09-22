@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { UIRoutingModule } from './ui-routing.module';
 import { UiComponent } from './ui/ui.component';
 import { IconModule } from '../icon/icon.module';
+import { CoreModule } from '../core/core.module';
 
 
 @NgModule({
@@ -11,8 +12,8 @@ import { IconModule } from '../icon/icon.module';
   imports: [
     CommonModule,
     UIRoutingModule,
-    IconModule
-  ],
+    IconModule,
+      ],
   exports: [
     UiComponent
   ]

@@ -1,6 +1,7 @@
 <header class="fixed-top">
   <app-icon-menu (click)="toggleMenu()"></app-icon-menu>
-  {{ title }}
+  <!-- <app-header></app-header> -->
+  <ng-content select="app-header"></ng-content>
 </header>
 
 <!-- menu doit être caché si false
@@ -14,6 +15,8 @@
   <aside>
     <div class="scroller">
       navigation
+      <!-- <app-nav></app-nav> -->
+      <ng-content select="app-nav"></ng-content>
     </div>
   </aside>
 
@@ -23,7 +26,7 @@
     </div>
 
     <footer>
-      FOOTER
+      <ng-content select="app-footer"></ng-content>
     </footer>
   </div>
 </main>

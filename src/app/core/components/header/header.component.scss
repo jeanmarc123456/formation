@@ -1,0 +1,14 @@
+@import 'theme';
+@import 'fonts';
+// utilisation de la référence située en stylings
+// convention de scss pour l'import de _fonts, etc...
+:host {
+  display: block;
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+  color: $color2;
+  font-size: $h1-fz;
+}
