@@ -1,8 +1,11 @@
 <header class="fixed-top">
+  <app-icon-menu (click)="toggleMenu()"></app-icon-menu>
   {{ title }}
 </header>
 
-<main>
+<!-- menu doit être caché si false
+ -->
+<main [ngClass]="{'close-aside': !menuIsOpen}">
 
   <div class="shadow position-fixed">
 

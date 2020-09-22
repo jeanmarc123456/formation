@@ -3,13 +3,15 @@ import { CommonModule } from '@angular/common';
 
 import { UIRoutingModule } from './ui-routing.module';
 import { UiComponent } from './ui/ui.component';
+import { IconModule } from '../icon/icon.module';
 
 
 @NgModule({
   declarations: [UiComponent],
   imports: [
     CommonModule,
-    UIRoutingModule
+    UIRoutingModule,
+    IconModule
   ],
   exports: [
     UiComponent

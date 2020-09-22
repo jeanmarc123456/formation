@@ -10,8 +10,11 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
   declarations: [IconMenuComponent],
   imports: [
     CommonModule,
-    IconRoutingModule
-    FontAwesomeModule
+    IconRoutingModule,
+    FontAwesomeModule,
+  ],
+  exports: [
+    IconMenuComponent
   ]
 })
 export class IconModule { }
