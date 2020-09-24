@@ -9,16 +9,16 @@ import { RouterModule } from '@angular/router';
 
 
 @NgModule({
+  declarations: [HeaderComponent, NavComponent, FooterComponent],
   imports: [
     CommonModule,
     CoreRoutingModule,
     RouterModule
   ],
-  exports : [
+  exports: [
     HeaderComponent,
     NavComponent,
     FooterComponent
-  ],
-  declarations: [HeaderComponent, NavComponent, FooterComponent],
+  ]
 })
 export class CoreModule { }

@@ -1,0 +1,10 @@
+<h1>titre de mon tableau</h1>
+<app-table-light *ngIf="collectionClient" [headers]="headersClient">
+  <tr *ngFor="let client of collectionClient">
+    <td>{{ client.name | uppercase | lowercase }}</td>
+    <td>{{ client.ca }}</td>
+    <td>{{ client.comment }}</td>
+    <td>{{ client.state }}</td>
+    <td>{{ client.tva }}</td>
+  </tr>
+</app-table-light>
