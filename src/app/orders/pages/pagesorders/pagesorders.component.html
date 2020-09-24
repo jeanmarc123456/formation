@@ -7,7 +7,7 @@
     <td>{{ item.tjmHt }}</td>
     <td>{{ item | total }}</td>
     <td>{{ item | total: "ttc"  }}</td>
-    <td>
+    <td appState [state]="item.state">
       <select (change)="changeState(item, $event)">
         <option *ngFor="let state of states"
                 [value]="state"
