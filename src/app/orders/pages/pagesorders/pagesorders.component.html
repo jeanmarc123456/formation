@@ -1,4 +1,4 @@
-<app-table-dark *ngIf="collectionOrders" [headers]="headers">
+<app-table-dark *ngIf="collectionOrders$ | async as collectionOrders" [headers]="headers">
 
   <tr *ngFor="let item of collectionOrders">
     <td>{{ item.typePresta }}</td>
