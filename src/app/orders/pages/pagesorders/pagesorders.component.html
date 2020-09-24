@@ -19,3 +19,7 @@
   </tr>
 
 </app-table-light>
+<app-btn [action]="true" label="Action" (clicked)="testButton()"></app-btn>
+<app-btn route='/clients' label="Redirection vers client" (clicked)="testButton()"></app-btn>
+<app-btn href="http://www.google.com" label="Aller sur Google" (clicked)="testButton()"></app-btn>
+

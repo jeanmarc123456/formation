@@ -38,6 +38,12 @@ export class PagesordersComponent implements OnInit {
        item.state = result.state;
     });
   }
+
+public testButton() {
+  alert("Click sur le bouton !");
+}
+
+
   ngOnDestroy(): void {
     this.subscription.unsubscribe();
   }
