@@ -1,4 +1,4 @@
-<app-table-light *ngIf="collectionOrders" [headers]="headers">
+<app-table-dark *ngIf="collectionOrders" [headers]="headers">
 
   <tr *ngFor="let item of collectionOrders">
     <td>{{ item.typePresta }}</td>
@@ -18,7 +18,7 @@
     </td>
   </tr>
 
-</app-table-light>
+</app-table-dark>
 <app-btn [action]="true" label="Action" (clicked)="testButton()"></app-btn>
 <app-btn route='/clients' label="Redirection vers client" (clicked)="testButton()"></app-btn>
 <app-btn href="http://www.google.com" label="Aller sur Google" (clicked)="testButton()"></app-btn>
