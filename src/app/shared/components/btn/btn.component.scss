@@ -1,0 +1,22 @@
+@import 'theme';
+:host {
+  margin: 5px;
+}
+
+:host-context(app-template-a) {
+    a, button {
+    background-color: $color3;
+    color: #fff;
+    &:hover {
+      background: darken($color3,10)
+    }
+    }}
+
+:host-context(app-template-b) {
+  color: #fff;
+  a, button {
+    background-color: $color4;
+    color: #fff;
+    &:hover {
+      background: darken($color4,10)
+}}}

@@ -14,3 +14,11 @@
       background-color: $color-success;
 }
 }
+:host-context(app-template-a) {
+  color: #fff;
+}
+
+:host-context(app-template-b) {
+  .table-dark {
+    color: $color2;
+} }
