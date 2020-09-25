@@ -1,16 +1,6 @@
 {
   "orders": [
     {
-      "tjmHt": 144,
-      "nbJours": null,
-      "tva": 61,
-      "client": "René",
-      "comment": "merci m2i",
-      "id": 1,
-      "state": "CONFIRMED",
-      "typePresta": "formation55"
-    },
-    {
       "tjmHt": 1200,
       "nbJours": 1,
       "tva": 20,
