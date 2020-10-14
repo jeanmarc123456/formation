@@ -3,7 +3,7 @@
 
 
   <div class="form-group">
-    <label for="state">État :</label>
+    <label i18n for="state">État :</label>
     <select formControlName="state" class="form-control" id="state">
       <option *ngFor="let state of states"
               [ngValue]="state">
@@ -13,19 +13,19 @@
   </div>
 
   <div class="form-group">
-    <label for="client">Client :</label>
+    <label i18n for="client">Client :</label>
     <input formControlName="client" type="texte" class="form-control" id="client">
   </div>
 
   <div class="form-group">
-    <label for="tjmHt">Tarif Journalier :</label>
+    <label i18n for="tjmHt">Tarif Journalier :</label>
     <input formControlName="tjmHt" type="text" class="form-control" id="tjmHt">
     <!-- <div class="alert alert-danger" *ngIf="form.get('tjmHt').invalid && form.get('tjmHt').touched">Champ incomplet</div> -->
     <div invalidMessage="tjmHt" class="alert alert-danger">
-      <p *invalidType="'required'">
+      <p *invalidType="'required'" i18n>
         Champs obligatoire
       </p>
-      <p *invalidType="'minlength'">
+      <p *invalidType="'minlength'" i18n>
         Longueur du champ incorrect
       </p>
     </div>
@@ -33,22 +33,22 @@
 
 
   <div class="form-group">
-    <label for="nbJours">Nombre de jours :</label>
+    <label i18n for="nbJours" i18n>Nombre de jours :</label>
     <input formControlName="nbJours" type="number" class="form-control" id="nbJours">
   </div>
 
   <div class="form-group">
-    <label for="tva">Tva :</label>
+    <label i18n for="tva">Tva :</label>
     <input formControlName="tva" type="number" class="form-control" id="tva">
   </div>
 
   <div class="form-group">
-    <label for="comment">Commentaire :</label>
+    <label i18n for="comment">Commentaire :</label>
     <input formControlName="comment" type="texte" class="form-control" id="comment">
   </div>
 
   <div class="form-group">
-    <label for="typePresta">Prestation demandée :</label>
+    <label i18n for="typePresta">Prestation demandée :</label>
     <input formControlName="typePresta" type="texte" class="form-control" id="typePresta">
 </div>
 
