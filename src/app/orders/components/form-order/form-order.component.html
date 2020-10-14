@@ -19,9 +19,18 @@
 
   <div class="form-group">
     <label for="tjmHt">Tarif Journalier :</label>
-    <input formControlName="tjmHt" type="number" class="form-control" id="tjmHt">
-    <div class="alert alert-danger" *ngIf="form.get('tjmHt').invalid && form.get('tjmHt').touched">Champ incomplet</div>
+    <input formControlName="tjmHt" type="text" class="form-control" id="tjmHt">
+    <!-- <div class="alert alert-danger" *ngIf="form.get('tjmHt').invalid && form.get('tjmHt').touched">Champ incomplet</div> -->
+    <div invalidMessage="tjmHt" class="alert alert-danger">
+      <p *invalidType="'required'">
+        Champs obligatoire
+      </p>
+      <p *invalidType="'minlength'">
+        Longueur du champ incorrect
+      </p>
+    </div>
   </div>
+
 
   <div class="form-group">
     <label for="nbJours">Nombre de jours :</label>

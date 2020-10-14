@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
+import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { Observable } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
 import { Order } from 'src/app/shared/models/order';
@@ -14,10 +15,15 @@ export class PageEditOrderComponent implements OnInit {
 
 
   public order$: Observable<Order>;
+  public modalValues: Order;
+  @ViewChild('updateOrderModal') updateOrderModalRef: TemplateRef<any>
+  private currentActiveModal: NgbModalRef;
+
     constructor(
       private orderService: OrdersService,
       private currentRoute: ActivatedRoute,
       private router: Router,
+      private modalService: NgbModal,
     ) { }
 
   ngOnInit(): void {
@@ -30,9 +36,22 @@ export class PageEditOrderComponent implements OnInit {
     )
   }
 
+public openUpdateModal(values: any) {
+  this.modalValues = values;
+  this.currentActiveModal = this.modalService.open(this.updateOrderModalRef);
+
+}
+
+public dismissModal() {
+  this.currentActiveModal.dismiss();
+}
+
+
+
 public edit(item: Order) {
 this.orderService.updateOrder(item).subscribe(
    (result) => {
+    this.dismissModal();
     this.router.navigate(['orders']);
 });}
 

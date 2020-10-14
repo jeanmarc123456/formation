@@ -7,11 +7,14 @@ import { TableLightComponent } from './components/table-light/table-light.compon
 import { StateDirective } from './directives/state.directive';
 import { TotalPipe } from './pipes/total.pipe';
 import { SharedRoutingModule } from './shared-routing.module';
+import { InvalidTypeDirective } from './directives/invalid-type.directive';
+import { InvalidMessageDirective } from './directives/invalid-message.directive';
+import { ModalComponent } from './components/modal/modal.component';
 
 
 
 @NgModule({
-  declarations: [TableLightComponent, TotalPipe, StateDirective, BtnComponent, TableDarkComponent],
+  declarations: [TableLightComponent, TotalPipe, StateDirective, BtnComponent, TableDarkComponent, InvalidTypeDirective, InvalidMessageDirective, ModalComponent],
   imports: [
     CommonModule,
     SharedRoutingModule,
@@ -23,6 +26,9 @@ import { SharedRoutingModule } from './shared-routing.module';
     StateDirective,
     BtnComponent,
     TableDarkComponent,
+    InvalidMessageDirective,
+    InvalidTypeDirective,
+    ModalComponent
   ]
 })
 export class SharedModule { }

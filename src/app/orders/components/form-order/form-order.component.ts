@@ -19,9 +19,9 @@ export class FormOrderComponent implements OnInit {
 
   ngOnInit(): void {
     this.form = this.formB.group({
-      tjmHt: [this.order.tjmHt, Validators.required],
-      nbJours: [this.order.nbJours],
-      tva: [this.order.tva],
+      tjmHt: [this.order.tjmHt, Validators.compose([Validators.required, Validators.minLength(3)])],
+      nbJours: [this.order.nbJours, Validators.compose([Validators.required, Validators.minLength(3)])],
+      tva: [this.order.tva, Validators.minLength(2)],
       client: [this.order.client, Validators.compose([Validators.required, Validators.minLength(3)])],
       comment: [this.order.comment, Validators.minLength(2)],
       id: [this.order.id],
