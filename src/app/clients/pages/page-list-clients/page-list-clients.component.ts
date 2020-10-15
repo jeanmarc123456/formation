@@ -26,8 +26,22 @@ export class PageListClientsComponent implements OnInit, OnDestroy {
       "Chiffre d'affaire",
       "Commentaire",
       "Etat",
-      "TVA"
+      "TVA",
+      "Actions"
+
     ]
+  }
+
+  public deleteItem(item: Client) {
+    this.clientService.deleteItem(item).subscribe(
+      (result) => {
+        this.clientService.collection.subscribe(
+          (datas) => {
+            this.collectionClient = datas;
+          }
+        )
+      }
+    )
   }
 
   ngOnDestroy(): void {

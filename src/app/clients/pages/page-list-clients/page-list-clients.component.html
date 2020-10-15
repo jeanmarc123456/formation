@@ -6,5 +6,9 @@
     <td>{{ client.comment }}</td>
     <td>{{ client.state }}</td>
     <td>{{ client.tva }}</td>
+    <td>
+      <app-icon-delete (click)="deleteItem(client)"></app-icon-delete>
+    </td>
   </tr>
 </app-table-light>
+<app-btn route='/clients/add' label="Ajout d'un client"></app-btn>

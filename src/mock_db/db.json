@@ -49,6 +49,16 @@
       "id": 44,
       "state": "OPTION",
       "typePresta": "récurage des wc"
+    },
+    {
+      "tjmHt": 300,
+      "nbJours": 1,
+      "tva": 20,
+      "client": "Juliette",
+      "comment": "pas de commentaire",
+      "id": 45,
+      "state": "OPTION",
+      "typePresta": "récurage des wc"
     }
   ],
   "clients": [
@@ -66,6 +76,22 @@
       "name": "Modis",
       "ca": 120000,
       "comment": "un comment pour client modis"
+    },
+    {
+      "id": 5,
+      "name": "Lucien",
+      "ca": "2500",
+      "comment": "merci de valider",
+      "state": "OPTION",
+      "tva": 10
+    },
+    {
+      "id": 6,
+      "name": "Lucien",
+      "ca": "300",
+      "comment": "merci de valider",
+      "state": "OPTION",
+      "tva": 10
     }
   ]
 }
