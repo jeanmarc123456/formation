@@ -17,6 +17,9 @@ export class PageRecapOrderComponent implements OnInit {
   public collectionOrder$: Observable<Order[]>;
   public states = Object.values(StateOrder);
   public tableHeaders: string[];
+  public listCollection$: Observable<[Order[], Order[]]>;
+  public listOrder1: Order[];
+  public listOrder2: Order[];
 
 
   constructor(
@@ -44,7 +47,7 @@ export class PageRecapOrderComponent implements OnInit {
           return this.clientservice.getItemById(params.get("id")).pipe(
             mergeMap(
               (client) => {
-                return this.orderService.getOrderByClientName(client.name)
+                return this.orderService.getAllOrderByClientName(client.name)
               }
             )
           )
@@ -60,7 +63,30 @@ export class PageRecapOrderComponent implements OnInit {
     "Total TTC",
     "Stat",
     "Actions"
-    ]}
+    ]
+
+    // this.listCollection$ = this.currentRoute.paramMap.pipe(
+    //   mergeMap(
+    //     (params: ParamMap) => {
+    //       return this.clientservice.getItemById(params.get("id")).pipe(
+    //         mergeMap(
+    //           (client) => {
+    //             return this.orderService.getAllOrderByClientName(client.name)
+    //           }
+    //         )
+    //       )
+    //     })
+    //   )
+
+
+    // this.listCollection$.subscribe(
+    //   (cols) => {
+    //     this.listOrder1 = cols[0];
+    //     this.listOrder2 = cols[1];
+    //   }
+    // )
+    }
+
 
   public changeState(item: Order, event) {
     this.orderService.changeState(item, event.target.value).subscribe((result) => {

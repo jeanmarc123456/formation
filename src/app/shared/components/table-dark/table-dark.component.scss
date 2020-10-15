@@ -2,6 +2,20 @@
 
 
 .table-dark {
+
+
+.state-cancel {
+      background-color: $color-error;
+}
+
+.state-option {
+      background-color: $color3;
+}
+
+.state-confirmed {
+      background-color: $color-success;
+}
+
 .state-cancel {
       background-color: $color-error;
 }
@@ -14,11 +28,11 @@
       background-color: $color-success;
 }
 }
-:host-context(app-template-a) {
-  color: #fff;
-}
+// :host-context(app-template-a) {
+//   color: #fff;
+// }
 
-:host-context(app-template-b) {
-  .table-dark {
-    color: $color2;
-} }
+// :host-context(app-template-b) {
+//   .table-dark {
+//     color: $color2;
+// } }
