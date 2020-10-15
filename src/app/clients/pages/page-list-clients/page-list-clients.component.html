@@ -8,6 +8,7 @@
     <td>{{ client.tva }}</td>
     <td>
       <app-icon-delete (click)="deleteItem(client)"></app-icon-delete>
+      <app-btn route="/orders/recap/{{client.id}}" label="Consulter les commandes"></app-btn>
     </td>
   </tr>
 </app-table-light>

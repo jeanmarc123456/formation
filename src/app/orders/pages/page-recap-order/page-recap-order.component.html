@@ -1,0 +1,29 @@
+<app-template-a title="Commandes" subtitle="Liste">
+  <app-table-dark *ngIf="collectionOrder$ | async as collectionOrders" [headers]="tableHeaders">
+
+    <tr *ngFor="let item of collectionOrders">
+      <td>{{ item.typePresta }}</td>
+      <td>{{ item.client }}</td>
+      <td>{{ item.nbJours }}</td>
+      <td>{{ item.tjmHt |currency: 'EUR' }}</td>
+      <td>{{ item | total |currency: 'EUR' }}</td>
+      <td>{{ item | total: "ttc" |currency: 'EUR' }}</td>
+      <td appState [state]="item.state">
+        <select (change)="changeState(item, $event)">
+          <option *ngFor="let state of states"
+                  [value]="state"
+                  [selected]="state === item.state">
+              {{ state }}
+          </option>
+        </select>
+      </td>
+      <td>
+        <!-- <app-icon-update (click)="edit(item)"></app-icon-update>
+        <app-icon-delete (click)="delete(item)"></app-icon-delete> -->
+      </td>
+    </tr>
+  </app-table-dark>
+  <!-- <app-btn [action]="true" label="Action" (clicked)="testButton()"></app-btn> -->
+  <!-- <app-btn route='/orders/add' label="Ajout d'une commande"></app-btn> -->
+  <!-- <app-btn href="http://www.google.com" label="Aller sur Google" (clicked)="testButton()"></app-btn> -->
+  </app-template-a>

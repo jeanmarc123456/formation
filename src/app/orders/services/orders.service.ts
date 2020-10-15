@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, pipe } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { StateOrder } from 'src/app/shared/enums/state-order.enum';
 import { Order } from 'src/app/shared/models/order';
@@ -53,4 +53,13 @@ export class OrdersService {
     return this.http.get<Order>(`${this.urlApi}orders/${id}`);
   }
 
+  public getOrderByClientName(name: string): Observable<Order[]> {
+    return this.http.get<Order[]>(`${this.urlApi}orders?client=${name}`).pipe(
+      map((col) => {
+        return col.map((item) => {
+          return new Order(item);
+        })
+      })
+    )
+  }
 }
